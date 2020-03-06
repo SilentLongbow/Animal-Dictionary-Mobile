@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.en_dedictionary">
+    package="nz.ac.uclive.mjk141.en_dedictionary">
 
     <application
         android:allowBackup="true"
