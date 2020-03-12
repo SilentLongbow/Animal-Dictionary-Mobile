@@ -1,5 +1,4 @@
 <resources>
     <string name="app_name">en-de Dictionary</string>
-    <string name="search_hint_english">Search for animals</string>
-    <string name="search_hint_deutsch">Nach Tiere suchen</string>
+    <string name="search_hint">Search for animals</string>
 </resources>
