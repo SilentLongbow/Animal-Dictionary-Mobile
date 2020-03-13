@@ -1,6 +1,6 @@
 package nz.ac.uclive.mjk141.en_dedictionary
 
-object dictionaryEntries {
+object Translations {
     private const val MASCULINE = "der"
     private const val FEMININE = "die"
     private const val NEUTRAL = "das"
