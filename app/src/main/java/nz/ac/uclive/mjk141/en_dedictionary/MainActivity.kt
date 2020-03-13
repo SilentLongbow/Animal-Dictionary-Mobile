@@ -4,9 +4,8 @@ import android.app.Activity
 import android.os.Bundle
 import android.widget.Button
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.search.*
+import nz.ac.uclive.mjk141.en_dedictionary.main_page_recycler.DictionaryAdapter
 
 class MainActivity : Activity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -18,7 +17,10 @@ class MainActivity : Activity() {
         }
 
         val dictionaryArray = Translations.entries
-        dictionaryView.adapter = DictionaryAdapter(dictionaryArray)
+        dictionaryView.adapter =
+            DictionaryAdapter(
+                dictionaryArray
+            )
         dictionaryView.layoutManager = LinearLayoutManager(this)
         dictionaryView.setHasFixedSize(true)
 

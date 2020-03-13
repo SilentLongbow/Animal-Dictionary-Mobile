@@ -1,21 +1,29 @@
-package nz.ac.uclive.mjk141.en_dedictionary
+package nz.ac.uclive.mjk141.en_dedictionary.main_page_recycler
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Filter
+import android.widget.Filterable
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.dictionary_item.view.*
+import nz.ac.uclive.mjk141.en_dedictionary.R
 
-class DictionaryAdapter(private val dictionaryArray: Array<DictionaryEntry>) : RecyclerView.Adapter<DictionaryAdapter.DictionaryViewHolder>() {
+class DictionaryAdapter(private val dictionaryArray: Array<DictionaryEntry>) :
+    RecyclerView.Adapter<DictionaryAdapter.DictionaryViewHolder>() {
+    private var fullDictionaryArray = dictionaryArray.clone()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): DictionaryViewHolder {
         // Parent - RecyclerView that ViewHolder will be in, and context is the activity RV is in.
-        val itemView = LayoutInflater.from(parent.context).inflate(R.layout.dictionary_item,
+        val itemView = LayoutInflater.from(parent.context).inflate(
+            R.layout.dictionary_item,
         parent, false)
 
-        return DictionaryViewHolder(itemView)
+        return DictionaryViewHolder(
+            itemView
+        )
     }
 
     override fun onBindViewHolder(holder: DictionaryViewHolder, position: Int) {
