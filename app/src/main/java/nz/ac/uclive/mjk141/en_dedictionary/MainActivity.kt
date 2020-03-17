@@ -1,20 +1,18 @@
 package nz.ac.uclive.mjk141.en_dedictionary
 
-import android.app.Activity
 import android.os.Bundle
-import android.widget.Button
+import android.view.Menu
+import androidx.appcompat.widget.Toolbar
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import kotlinx.android.synthetic.main.activity_main.*
 import nz.ac.uclive.mjk141.en_dedictionary.main_page_recycler.DictionaryAdapter
 
-class MainActivity : Activity() {
+class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        val searchButton: Button = findViewById(R.id.searchButton)
-        searchButton.setOnClickListener {
-            onSearchRequested()
-        }
+        setSupportActionBar(findViewById(R.id.toolbar))
 
         val dictionaryArray = Translations.entries
         dictionaryView.adapter =
@@ -24,5 +22,10 @@ class MainActivity : Activity() {
         dictionaryView.layoutManager = LinearLayoutManager(this)
         dictionaryView.setHasFixedSize(true)
 
+    }
+
+    override fun onPrepareOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.options_menu, menu)
+        return true
     }
 }

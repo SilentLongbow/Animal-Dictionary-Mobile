@@ -10,10 +10,12 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.dictionary_item.view.*
 import nz.ac.uclive.mjk141.en_dedictionary.R
+import java.util.*
+import kotlin.collections.ArrayList
 
-class DictionaryAdapter(private val dictionaryArray: Array<DictionaryEntry>) :
-    RecyclerView.Adapter<DictionaryAdapter.DictionaryViewHolder>() {
-    private var fullDictionaryArray = dictionaryArray.clone()
+class DictionaryAdapter(private val dictionary: ArrayList<DictionaryEntry>) :
+    RecyclerView.Adapter<DictionaryAdapter.DictionaryViewHolder>(), Filterable {
+    private var fullDictionary: ArrayList<DictionaryEntry> = dictionary.clone() as ArrayList<DictionaryEntry>
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): DictionaryViewHolder {
         // Parent - RecyclerView that ViewHolder will be in, and context is the activity RV is in.
@@ -27,13 +29,13 @@ class DictionaryAdapter(private val dictionaryArray: Array<DictionaryEntry>) :
     }
 
     override fun onBindViewHolder(holder: DictionaryViewHolder, position: Int) {
-        val currentItem = dictionaryArray[position]
+        val currentItem = dictionary[position]
 
         holder.dictionaryImageView.setImageResource(R.drawable.placeholder_animal)
         holder.dictionaryTextView.text = currentItem.term
     }
 
-    override fun getItemCount() = dictionaryArray.size
+    override fun getItemCount() = dictionary.size
 
     /* ViewHolder represents a single row in the list. One instance of the ViewHolder
         contains one instance of row layout and metadata about row. */
@@ -41,4 +43,24 @@ class DictionaryAdapter(private val dictionaryArray: Array<DictionaryEntry>) :
         val dictionaryImageView: ImageView = itemView.dictionaryItemImage
         val dictionaryTextView: TextView = itemView.dictionaryItemText
     }
+
+    override fun getFilter(): Filter {
+        TODO("Not yet implemented")
+    }
+
+//    private val dictionaryFilter = object : Filter() {
+//        override fun performFiltering(constraint: CharSequence?): FilterResults {
+//            val filteredEntries: ArrayList<DictionaryEntry> = arrayListOf()
+//            if (constraint == null || constraint.isEmpty()) {
+//                filteredEntries.addAll(fullDictionary)
+//            } else {
+//                val filterPattern = constraint.toString().toLowerCase(Locale.getDefault()).trim()
+//
+//            }
+//        }
+//
+//        override fun publishResults(constraint: CharSequence?, results: FilterResults?) {
+//            TODO("Not yet implemented")
+//        }
+//    }
 }
