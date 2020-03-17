@@ -15,10 +15,7 @@ class MainActivity : AppCompatActivity() {
         setSupportActionBar(findViewById(R.id.toolbar))
 
         val dictionaryArray = Translations.entries
-        dictionaryView.adapter =
-            DictionaryAdapter(
-                dictionaryArray
-            )
+        dictionaryView.adapter = DictionaryAdapter(dictionaryArray)
         dictionaryView.layoutManager = LinearLayoutManager(this)
         dictionaryView.setHasFixedSize(true)
 

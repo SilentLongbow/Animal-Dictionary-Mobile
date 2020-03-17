@@ -7,7 +7,7 @@ object Translations {
     private const val FEMININE = "die"
     private const val NEUTRAL = "das"
 
-    val entries = arrayOf(
+    val entries = arrayListOf(
         DictionaryEntry(
             "Alligator",
             "Alligator",
