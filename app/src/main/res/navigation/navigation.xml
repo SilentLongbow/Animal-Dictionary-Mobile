@@ -1,6 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/navigation">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/animalSelectionFragment">
 
+    <fragment
+        android:id="@+id/animalSelectionFragment"
+        android:name="nz.ac.uclive.mjk141.en_dedictionary.FragmentAnimalSelection"
+        android:label="The Best Label"
+        tools:layout="@layout/fragment_animal_selection" >
+        <action
+            android:id="@+id/action_animalSelectionFragment_to_fragmentAnimalViewImage"
+            app:destination="@id/fragmentAnimalViewImage" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentAnimalViewImage"
+        android:name="nz.ac.uclive.mjk141.en_dedictionary.FragmentAnimalViewImage"
+        android:label="fragment_animal_image_view"
+        tools:layout="@layout/fragment_animal_image_view" />
 </navigation>
