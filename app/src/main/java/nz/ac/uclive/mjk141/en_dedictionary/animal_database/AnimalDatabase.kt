@@ -4,11 +4,15 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
+import androidx.room.TypeConverters
+import nz.ac.uclive.mjk141.en_dedictionary.animal_database.dao.AnimalDao
+import nz.ac.uclive.mjk141.en_dedictionary.utils.Converters
 
-@Database(entities = [Animal::class, GrammaticalGender::class], version = 1, exportSchema = false)
+@Database(entities = [Animal::class], version = 1, exportSchema = false)
+@TypeConverters(Converters::class)
 abstract class AnimalDatabase : RoomDatabase() {
 
-    abstract val animalDatabaseDao: AnimalDatabaseDao
+    abstract val animalDao: AnimalDao
 
     companion object {
 
