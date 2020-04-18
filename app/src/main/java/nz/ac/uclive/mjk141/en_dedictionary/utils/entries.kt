@@ -1,11 +1,11 @@
-package nz.ac.uclive.mjk141.en_dedictionary
+package nz.ac.uclive.mjk141.en_dedictionary.utils
 
 import nz.ac.uclive.mjk141.en_dedictionary.main_page_recycler.DictionaryEntry
 
 enum class Gender(val str: String) {
-    MASCULINE("der"),
-    FEMININE("die"),
-    NEUTRAL("das")
+    Masculine("der"),
+    Feminine("die"),
+    Neutral("das")
 }
 
 object Translations {
@@ -13,212 +13,212 @@ object Translations {
         DictionaryEntry(
             "Alligator",
             "Alligator",
-            Gender.MASCULINE
+            Gender.Masculine
         ),
         DictionaryEntry(
             "Ant",
             "Ameise",
-            Gender.FEMININE
+            Gender.Feminine
         ),
         DictionaryEntry(
             "Bear",
             "Bär",
-            Gender.MASCULINE
+            Gender.Masculine
         ),
         DictionaryEntry(
             "Bird",
             "Vogel",
-            Gender.MASCULINE
+            Gender.Masculine
         ),
         DictionaryEntry(
             "Cat",
             "Katze",
-            Gender.FEMININE
+            Gender.Feminine
         ),
         DictionaryEntry(
             "Cow",
             "Kuh",
-            Gender.FEMININE
+            Gender.Feminine
         ),
         DictionaryEntry(
             "Deer",
             "Reh",
-            Gender.NEUTRAL
+            Gender.Neutral
         ),
         DictionaryEntry(
             "Dog",
             "Hund",
-            Gender.MASCULINE
+            Gender.Masculine
         ),
         DictionaryEntry(
             "Donkey",
             "Esel",
-            Gender.NEUTRAL
+            Gender.Neutral
         ),
         DictionaryEntry(
             "Eagle",
             "Adler",
-            Gender.MASCULINE
+            Gender.Masculine
         ),
         DictionaryEntry(
             "Elephant",
             "Elefant",
-            Gender.MASCULINE
+            Gender.Masculine
         ),
         DictionaryEntry(
             "Fish",
             "Fisch",
-            Gender.MASCULINE
+            Gender.Masculine
         ),
         DictionaryEntry(
             "Fox",
             "Fuchs",
-            Gender.MASCULINE
+            Gender.Masculine
         ),
         DictionaryEntry(
             "Giraffe",
             "Giraffe",
-            Gender.FEMININE
+            Gender.Feminine
         ),
         DictionaryEntry(
             "Goat",
             "Ziege",
-            Gender.FEMININE
+            Gender.Feminine
         ),
         DictionaryEntry(
             "Hare",
             "Hase",
-            Gender.MASCULINE
+            Gender.Masculine
         ),
         DictionaryEntry(
             "Horse",
             "Pferd",
-            Gender.NEUTRAL
+            Gender.Neutral
         ),
         DictionaryEntry(
             "Jaguar",
             "Jaguar",
-            Gender.MASCULINE
+            Gender.Masculine
         ),
         DictionaryEntry(
             "Kangaroo",
             "Känguru",
-            Gender.NEUTRAL
+            Gender.Neutral
         ),
         DictionaryEntry(
             "Kiwi",
             "Kiwi",
-            Gender.FEMININE
+            Gender.Feminine
         ),
         DictionaryEntry(
             "Leopard",
             "Leopard",
-            Gender.MASCULINE
+            Gender.Masculine
         ),
         DictionaryEntry(
             "Lion",
             "Löwe",
-            Gender.MASCULINE
+            Gender.Masculine
         ),
         DictionaryEntry(
             "Lynx",
             "Luchs",
-            Gender.MASCULINE
+            Gender.Masculine
         ),
         DictionaryEntry(
             "Manta Ray",
             "Mantarochen",
-            Gender.MASCULINE
+            Gender.Masculine
         ),
         DictionaryEntry(
             "Mole",
             "Maulwurf",
-            Gender.MASCULINE
+            Gender.Masculine
         ),
         DictionaryEntry(
             "Newt",
             "Molch",
-            Gender.MASCULINE
+            Gender.Masculine
         ),
         DictionaryEntry(
             "Octopus",
             "Oktopus",
-            Gender.MASCULINE
+            Gender.Masculine
         ),
         DictionaryEntry(
             "Ostrich",
             "Strauß",
-            Gender.MASCULINE
+            Gender.Masculine
         ),
         DictionaryEntry(
             "Parrot",
             "Papagei",
-            Gender.MASCULINE
+            Gender.Masculine
         ),
         DictionaryEntry(
             "Pig",
             "Schwein",
-            Gender.NEUTRAL
+            Gender.Neutral
         ),
         DictionaryEntry(
             "Quail",
             "Wachtel",
-            Gender.FEMININE
+            Gender.Feminine
         ),
         DictionaryEntry(
             "Rabbit",
             "Kaninchen",
-            Gender.NEUTRAL
+            Gender.Neutral
         ),
         DictionaryEntry(
             "Rhinoceros",
             "Nashorn",
-            Gender.NEUTRAL
+            Gender.Neutral
         ),
         DictionaryEntry(
             "Seal",
             "Siegel",
-            Gender.NEUTRAL
+            Gender.Neutral
         ),
         DictionaryEntry(
             "Snake",
             "Schlange",
-            Gender.FEMININE
+            Gender.Feminine
         ),
         DictionaryEntry(
             "Tiger",
             "Tiger",
-            Gender.MASCULINE
+            Gender.Masculine
         ),
         DictionaryEntry(
             "Tortoise",
             "Schildkröte",
-            Gender.FEMININE
+            Gender.Feminine
         ),
         DictionaryEntry(
             "Vulture",
             "Geier",
-            Gender.MASCULINE
+            Gender.Masculine
         ),
         DictionaryEntry(
             "Weasel",
             "Wiesel",
-            Gender.MASCULINE
+            Gender.Masculine
         ),
         DictionaryEntry(
             "Wolf",
             "Wolf",
-            Gender.MASCULINE
+            Gender.Masculine
         ),
         DictionaryEntry(
             "Yak",
             "Yak",
-            Gender.MASCULINE
+            Gender.Masculine
         ),
         DictionaryEntry(
             "Zebra",
             "Zebra",
-            Gender.NEUTRAL
+            Gender.Neutral
         )
     )
 }
