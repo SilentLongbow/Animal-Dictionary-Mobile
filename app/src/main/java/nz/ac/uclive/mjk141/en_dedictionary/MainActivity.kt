@@ -1,15 +1,12 @@
 package nz.ac.uclive.mjk141.en_dedictionary
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.appcompat.widget.Toolbar
+import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.NavController
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.NavigationUI
-import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.toolbar.*
-import kotlinx.android.synthetic.main.toolbar.custom_toolbar
 
 class MainActivity : AppCompatActivity() {
     private lateinit var navController: NavController

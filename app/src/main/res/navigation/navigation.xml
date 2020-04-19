@@ -7,16 +7,28 @@
 
     <fragment
         android:id="@+id/animalSelectionFragment"
-        android:name="nz.ac.uclive.mjk141.en_dedictionary.FragmentAnimalSelection"
+        android:name="nz.ac.uclive.mjk141.en_dedictionary.animal_selection.FragmentAnimalSelection"
         android:label="The Best Label"
         tools:layout="@layout/fragment_animal_selection" >
         <action
             android:id="@+id/action_animalSelectionFragment_to_fragmentAnimalViewImage"
             app:destination="@id/fragmentAnimalViewImage" />
+        <action
+            android:id="@+id/action_animalSelectionFragment_to_fragmentAddAnimal2"
+            app:destination="@id/fragmentAddAnimal" />
     </fragment>
     <fragment
         android:id="@+id/fragmentAnimalViewImage"
-        android:name="nz.ac.uclive.mjk141.en_dedictionary.FragmentAnimalViewImage"
+        android:name="nz.ac.uclive.mjk141.en_dedictionary.view_animal.FragmentAnimalViewImage"
         android:label="fragment_animal_image_view"
         tools:layout="@layout/fragment_animal_image_view" />
+    <fragment
+        android:id="@+id/fragmentAddAnimal"
+        android:name="nz.ac.uclive.mjk141.en_dedictionary.add_animal.FragmentAddAnimal"
+        android:label="fragment_add_animal_fragment"
+        tools:layout="@layout/fragment_add_animal" >
+        <action
+            android:id="@+id/action_fragmentAddAnimal_to_animalSelectionFragment"
+            app:destination="@id/animalSelectionFragment" />
+    </fragment>
 </navigation>

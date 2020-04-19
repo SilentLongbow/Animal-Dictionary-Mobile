@@ -10,8 +10,6 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.dictionary_item.view.*
 import nz.ac.uclive.mjk141.en_dedictionary.R
-import java.util.*
-import kotlin.collections.ArrayList
 
 class DictionaryAdapter(private val dictionary: ArrayList<DictionaryEntry>) :
     RecyclerView.Adapter<DictionaryAdapter.DictionaryViewHolder>(), Filterable {
@@ -22,10 +20,7 @@ class DictionaryAdapter(private val dictionary: ArrayList<DictionaryEntry>) :
         val itemView = LayoutInflater.from(parent.context).inflate(
             R.layout.dictionary_item,
         parent, false)
-
-        return DictionaryViewHolder(
-            itemView
-        )
+        return DictionaryViewHolder(itemView)
     }
 
     override fun onBindViewHolder(holder: DictionaryViewHolder, position: Int) {
