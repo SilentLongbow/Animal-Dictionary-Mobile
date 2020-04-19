@@ -2,9 +2,12 @@
     <string name="app_name">Animal Dictionary</string>
     <string name="search_hint">Search for animals</string>
 
-    <string name="entry_name">Animal Name:</string>
-    <string name="entry_gender">Gender:</string>
+    <string name="entry_title_name">Animal Name:</string>
+    <string name="entry_title_gender">Gender:</string>
     <string name="title_add_animal">Add an Animal</string>
 
     <string name="add_animal_description" translatable="false">Floating action button to add a new animal to the database</string>
+    <string name="add_image">Add Image</string>
+    <string name="english_name">English Name</string>
+    <string name="german_name">German Name</string>
 </resources>
