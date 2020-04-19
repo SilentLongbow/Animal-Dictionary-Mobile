@@ -1,13 +1,13 @@
-package nz.ac.uclive.mjk141.en_dedictionary
+package nz.ac.uclive.mjk141.en_dedictionary.animal_selection
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
-import kotlinx.android.synthetic.main.fragment_animal_selection.*
 import kotlinx.android.synthetic.main.fragment_animal_selection.view.*
+import nz.ac.uclive.mjk141.en_dedictionary.R
 
 /**
  * A simple [Fragment] subclass.

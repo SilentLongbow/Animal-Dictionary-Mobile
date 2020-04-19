@@ -1,10 +1,11 @@
-package nz.ac.uclive.mjk141.en_dedictionary
+package nz.ac.uclive.mjk141.en_dedictionary.view_animal
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
+import nz.ac.uclive.mjk141.en_dedictionary.R
 
 /**
  * A simple [Fragment] subclass.
