@@ -1,4 +1,10 @@
 <resources>
     <string name="app_name">Animal Dictionary</string>
     <string name="search_hint">Search for animals</string>
+
+    <string name="entry_name">Animal Name:</string>
+    <string name="entry_gender">Gender:</string>
+    <string name="title_add_animal">Add an Animal</string>
+
+    <string name="add_animal_description" translatable="false">Floating action button to add a new animal to the database</string>
 </resources>
