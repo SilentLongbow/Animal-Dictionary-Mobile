@@ -8,3 +8,5 @@ const val NEUTRAL_GENDER_NAME = "Neutral"
 const val FEMININE_GENDER_TEXT = "die"
 const val MASCULINE_GENDER_TEXT = "der"
 const val NEUTRAL_GENDER_TEXT = "das"
+
+const val IMAGE_SELECTION_CODE = 100

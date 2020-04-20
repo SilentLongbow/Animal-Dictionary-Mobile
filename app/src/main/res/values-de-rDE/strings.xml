@@ -9,6 +9,9 @@
     <string name="title_add_animal">Tier hinzufügen</string>
 
     <string name="add_image">Bild hinzufügen</string>
-    <string name="english_name">Englisch Bezeichnung</string>
+    <string name="english_name">Englische Bezeichnung</string>
     <string name="german_name">Deutsche Bezeichnung</string>
+    <string name="photo_of_the_animal">Das Foto von dem Tier</string>
+    <string name="image_of_the_german_flag">Bild der deutschen Flagge</string>
+    <string name="image_of_the_english_flag">Bild der englischen Flagge</string>
 </resources>

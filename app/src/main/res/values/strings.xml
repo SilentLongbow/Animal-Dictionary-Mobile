@@ -10,4 +10,7 @@
     <string name="add_image">Add Image</string>
     <string name="english_name">English Name</string>
     <string name="german_name">German Name</string>
+    <string name="photo_of_the_animal">Photo of the animal</string>
+    <string name="image_of_the_german_flag">Image of the German flag</string>
+    <string name="image_of_the_english_flag">Image of the English flag</string>
 </resources>

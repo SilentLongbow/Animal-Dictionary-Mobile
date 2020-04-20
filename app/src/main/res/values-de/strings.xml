@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <string name="app_name">Wörterbuch der Tiere</string>
-    <string name="search_hint">Nach Tiere Suchen</string>
-    <string name="entry_name">Bezeichnung für das Tier:</string>
-    <string name="entry_gender">Geschlecht:</string>
-    <string name="title_add_animal">Tier hinzufügen</string>
-</resources>
