@@ -29,37 +29,18 @@
 
                 <ImageView
                     android:id="@+id/imageDisplay"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
                     android:adjustViewBounds="true"
                     android:contentDescription="@string/photo_of_the_animal"
                     android:elevation="2dp"
-                    android:visibility="gone"
-                    app:layout_constraintBottom_toTopOf="@+id/guideline"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.0"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.0"
-                    app:srcCompat="@drawable/butterfly"
-                    tools:src="@drawable/ic_image_black_24dp" />
-
-                <Button
-                    android:id="@+id/addImageButton"
-                    style="@style/Widget.AppCompat.Button"
-                    android:layout_width="0dp"
-                    android:layout_height="0dp"
-                    android:background="#FFFFFF"
-                    android:elevation="2dp"
-                    android:text="@string/add_image"
-                    android:textSize="24sp"
                     android:visibility="visible"
                     app:layout_constraintBottom_toTopOf="@+id/guideline"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.0" />
+                    app:layout_constraintVertical_bias="0.0"
+                    app:srcCompat="@drawable/ic_image_black_24dp" />
 
                 <androidx.constraintlayout.widget.Guideline
                     android:id="@+id/guideline"
@@ -67,6 +48,21 @@
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
                     app:layout_constraintGuide_percent="0.4" />
+
+                <Button
+                    android:id="@+id/addImageButton"
+                    style="@style/Widget.AppCompat.Button"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:background="#FFFFFF"
+                    android:elevation="2dp"
+                    android:text="@string/add_image"
+                    android:textSize="24sp"
+                    android:visibility="visible"
+                    app:layout_constraintEnd_toStartOf="@+id/guideline3"
+                    app:layout_constraintStart_toStartOf="@+id/guideline2"
+                    app:layout_constraintTop_toBottomOf="@+id/imageDisplay" />
 
                 <androidx.constraintlayout.widget.Guideline
                     android:id="@+id/guideline2"
@@ -87,11 +83,13 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
-                    app:cardBackgroundColor="#E1FFFFFF"
+                    android:layout_marginBottom="16dp"
+                    app:cardBackgroundColor="#FAFAFA"
+                    app:cardElevation="2dp"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/guideline">
+                    app:layout_constraintEnd_toStartOf="@+id/guideline3"
+                    app:layout_constraintStart_toStartOf="@+id/guideline2"
+                    app:layout_constraintTop_toBottomOf="@+id/addImageButton">
 
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="match_parent"
@@ -173,6 +171,18 @@
                             app:layout_constraintTop_toBottomOf="@+id/germanNameEntry"
                             app:layout_constraintVertical_bias="0.0"
                             tools:listheader="Hello" />
+
+                        <Button
+                            android:id="@+id/saveEntryButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginBottom="16dp"
+                            android:text="@string/save_text"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="@+id/genderSelectionSpinner"
+                            app:layout_constraintStart_toStartOf="@+id/genderSelectionSpinner"
+                            app:layout_constraintTop_toBottomOf="@+id/genderSelectionSpinner" />
 
                     </androidx.constraintlayout.widget.ConstraintLayout>
 
