@@ -1,6 +1,8 @@
 package nz.ac.uclive.mjk141.en_dedictionary.add_animal
 
 import android.content.Intent
+import android.graphics.Bitmap
+import android.provider.MediaStore
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -31,23 +33,12 @@ class AddAnimalViewModel(
     val eventSelectingImage: LiveData<Boolean>
         get() = _eventSelectingImage
 
-    private val _imageSelected = MutableLiveData<Boolean>()
-    val imageSelected: LiveData<Boolean>
-        get() = _imageSelected
+    private val _imageBitmap = MutableLiveData<Bitmap>()
+    val imageBitmap: LiveData<Bitmap>
+        get() = _imageBitmap
 
     init {
-        _imageSelected.value = false
         _eventSelectingImage.value = false
-    }
-
-
-    // Event functions
-    fun eventImageSelected() {
-        _imageSelected.value = true
-    }
-
-    fun eventImageDeselected() {
-        _imageSelected.value = false
     }
 
     fun eventSelectingImageStart() {
@@ -56,5 +47,24 @@ class AddAnimalViewModel(
 
     fun eventSelectingImageCompleted() {
         _eventSelectingImage.value = false
+    }
+
+    fun storeImage(bitmap: Bitmap) {
+        _imageBitmap.value = bitmap
+    }
+
+    fun createImageSelectionIntents(): Intent {
+        val documentsSelectionIntent = Intent(Intent.ACTION_GET_CONTENT)
+        documentsSelectionIntent.type = "image/*"
+
+        val gallerySelectionIntent = Intent(
+            Intent.ACTION_PICK,
+            MediaStore.Images.Media.EXTERNAL_CONTENT_URI
+        )
+        gallerySelectionIntent.type = "image/*"
+
+        val methodSelectionIntent = Intent.createChooser(documentsSelectionIntent, "Select Image")
+        methodSelectionIntent.putExtra(Intent.EXTRA_INITIAL_INTENTS, arrayOf(gallerySelectionIntent))
+        return methodSelectionIntent
     }
 }

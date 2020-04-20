@@ -1,8 +1,14 @@
 package nz.ac.uclive.mjk141.en_dedictionary.add_animal
 
 import android.app.Activity
+import android.content.ContentResolver
 import android.content.Intent
+import android.graphics.Bitmap
+import android.graphics.BitmapFactory
+import android.graphics.ImageDecoder
+import android.net.Uri
 import android.os.Bundle
+import android.os.ParcelFileDescriptor
 import android.provider.MediaStore
 import android.util.Log
 import android.view.LayoutInflater
@@ -17,6 +23,7 @@ import nz.ac.uclive.mjk141.en_dedictionary.animal_database.AnimalDatabase
 import nz.ac.uclive.mjk141.en_dedictionary.databinding.AddAnimalFragmentBinding
 import nz.ac.uclive.mjk141.en_dedictionary.utils.IMAGE_SELECTION_CODE
 import nz.ac.uclive.mjk141.en_dedictionary.utils.hideSoftKeyboard
+import java.io.FileDescriptor
 
 
 class AddAnimalFragment : Fragment() {
@@ -27,19 +34,21 @@ class AddAnimalFragment : Fragment() {
     }
 
     private lateinit var viewModel: AddAnimalViewModel
+    private lateinit var binding: AddAnimalFragmentBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val binding: AddAnimalFragmentBinding = DataBindingUtil.inflate(
-            inflater,
-            R.layout.add_animal_fragment, container, false
-        )
 
         val application = requireNotNull(this.activity).application
         val animalDao = AnimalDatabase.getInstance(application).animalDao
         val viewModelFactory = AddAnimalViewModelFactory(animalDao)
+
+        binding = DataBindingUtil.inflate(
+            inflater,
+            R.layout.add_animal_fragment, container, false
+        )
 
         viewModel =
             ViewModelProvider(this, viewModelFactory)
@@ -69,6 +78,19 @@ class AddAnimalFragment : Fragment() {
         }
         viewModel.eventSelectingImage.observe(viewLifecycleOwner, imageButtonObserver)
 
+        val imageSelectedObserver = Observer<Bitmap> { imageBitmap ->
+            if (imageBitmap != null) {
+                binding.addImageButton.visibility = View.GONE
+                binding.imageDisplay.visibility = View.VISIBLE
+                binding.imageDisplay.setImageBitmap(imageBitmap)
+            } else {
+                binding.addImageButton.visibility = View.VISIBLE
+                binding.imageDisplay.visibility = View.GONE
+            }
+        }
+        viewModel.imageBitmap.observe(viewLifecycleOwner, imageSelectedObserver)
+
+
 
         return binding.root
     }
@@ -95,27 +117,25 @@ class AddAnimalFragment : Fragment() {
 
 
     private fun pickImage() {
-        val documentsSelectionIntent = Intent(Intent.ACTION_GET_CONTENT)
-        documentsSelectionIntent.type = "image/*"
-
-        val galleryIntent = Intent(
-            Intent.ACTION_PICK,
-            MediaStore.Images.Media.EXTERNAL_CONTENT_URI
-        )
-        galleryIntent.type = "image/*"
-
-        val chooserIntent = Intent.createChooser(documentsSelectionIntent, "Select Image")
-        chooserIntent.putExtra(Intent.EXTRA_INITIAL_INTENTS, arrayOf(galleryIntent))
-
-        startActivityForResult(chooserIntent, IMAGE_SELECTION_CODE)
+        val methodSelectionIntent = viewModel.createImageSelectionIntents()
+        startActivityForResult(methodSelectionIntent, IMAGE_SELECTION_CODE)
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
-
         if (resultCode == Activity.RESULT_OK && requestCode == IMAGE_SELECTION_CODE) {
             val imageUri = data?.data
-            // TODO Move some logic to viewModel (creation of intent) and launch intent here.
+            val imageBitmap = getBitmapFromUri(imageUri!!)
+            viewModel.storeImage(imageBitmap)
         }
+        viewModel.eventSelectingImageCompleted()
+    }
+
+    private fun getBitmapFromUri(uri: Uri): Bitmap {
+        val parcelFileDescriptor: ParcelFileDescriptor? = context?.contentResolver?.openFileDescriptor(uri, "r")
+        val fileDescriptor: FileDescriptor? = parcelFileDescriptor?.fileDescriptor
+        val image = BitmapFactory.decodeFileDescriptor(fileDescriptor)
+        parcelFileDescriptor?.close()
+        return image
     }
 }
