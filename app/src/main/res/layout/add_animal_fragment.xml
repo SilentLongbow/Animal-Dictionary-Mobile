@@ -26,7 +26,6 @@
                 android:clickable="true"
                 tools:context=".add_animal.AddAnimalFragment">
 
-
                 <ImageView
                     android:id="@+id/imageDisplay"
                     android:layout_width="wrap_content"
@@ -35,7 +34,7 @@
                     android:contentDescription="@string/photo_of_the_animal"
                     android:elevation="2dp"
                     android:visibility="visible"
-                    app:layout_constraintBottom_toTopOf="@+id/guideline"
+                    app:layout_constraintBottom_toTopOf="@+id/horizontalGuideline"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
@@ -43,7 +42,7 @@
                     app:srcCompat="@drawable/ic_image_black_24dp" />
 
                 <androidx.constraintlayout.widget.Guideline
-                    android:id="@+id/guideline"
+                    android:id="@+id/horizontalGuideline"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
@@ -54,25 +53,24 @@
                     style="@style/Widget.AppCompat.Button"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
                     android:background="#FFFFFF"
                     android:elevation="2dp"
                     android:text="@string/add_image"
                     android:textSize="24sp"
                     android:visibility="visible"
-                    app:layout_constraintEnd_toStartOf="@+id/guideline3"
-                    app:layout_constraintStart_toStartOf="@+id/guideline2"
+                    app:layout_constraintEnd_toStartOf="@+id/rightGuideLine"
+                    app:layout_constraintStart_toStartOf="@+id/leftGuideLine"
                     app:layout_constraintTop_toBottomOf="@+id/imageDisplay" />
 
                 <androidx.constraintlayout.widget.Guideline
-                    android:id="@+id/guideline2"
+                    android:id="@+id/leftGuideLine"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
                     app:layout_constraintGuide_begin="16dp" />
 
                 <androidx.constraintlayout.widget.Guideline
-                    android:id="@+id/guideline3"
+                    android:id="@+id/rightGuideLine"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
@@ -82,13 +80,13 @@
                     android:id="@+id/entryCardView"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
+                    android:layout_marginTop="8dp"
                     android:layout_marginBottom="16dp"
                     app:cardBackgroundColor="#FAFAFA"
                     app:cardElevation="2dp"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@+id/guideline3"
-                    app:layout_constraintStart_toStartOf="@+id/guideline2"
+                    app:layout_constraintEnd_toStartOf="@+id/rightGuideLine"
+                    app:layout_constraintStart_toStartOf="@+id/leftGuideLine"
                     app:layout_constraintTop_toBottomOf="@+id/addImageButton">
 
                     <androidx.constraintlayout.widget.ConstraintLayout
@@ -96,7 +94,7 @@
                         android:layout_height="match_parent">
 
                         <ImageView
-                            android:id="@+id/imageView"
+                            android:id="@+id/englishFlagImage"
                             android:layout_width="41dp"
                             android:layout_height="wrap_content"
                             android:layout_marginEnd="8dp"
@@ -119,7 +117,7 @@
                             android:contentDescription="@string/image_of_the_german_flag"
                             app:layout_constraintBottom_toBottomOf="@+id/germanNameEntry"
                             app:layout_constraintEnd_toStartOf="@+id/germanNameEntry"
-                            app:layout_constraintStart_toStartOf="@+id/imageView"
+                            app:layout_constraintStart_toStartOf="@+id/englishFlagImage"
                             app:layout_constraintTop_toTopOf="@+id/germanNameEntry"
                             app:srcCompat="@drawable/ic_flag_of_germany" />
 
@@ -137,7 +135,7 @@
                             android:textSize="18sp"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintHorizontal_bias="0.5"
-                            app:layout_constraintStart_toEndOf="@+id/imageView"
+                            app:layout_constraintStart_toEndOf="@+id/englishFlagImage"
                             app:layout_constraintTop_toTopOf="parent"
                             tools:text="Rhinoceros" />
 
@@ -152,25 +150,38 @@
                             android:hint="@string/german_name"
                             android:imeOptions="actionDone"
                             android:inputType="textPersonName"
-                            android:text="@{newAnimalViewModel.germanName}"
                             android:textSize="18sp"
                             app:layout_constraintEnd_toEndOf="@+id/englishNameEntry"
                             app:layout_constraintStart_toStartOf="@+id/englishNameEntry"
                             app:layout_constraintTop_toBottomOf="@+id/englishNameEntry"
                             tools:text="Nashorn" />
 
+                        <TextView
+                            android:id="@+id/genderSelectionTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto"
+                            android:text="@string/entry_title_gender"
+                            android:textSize="18sp"
+                            app:layout_constraintBottom_toBottomOf="@+id/genderSelectionSpinner"
+                            app:layout_constraintStart_toStartOf="@+id/germanFlagImage"
+                            app:layout_constraintTop_toTopOf="@+id/genderSelectionSpinner"
+                            app:layout_constraintVertical_bias=".5" />
+
                         <Spinner
                             android:id="@+id/genderSelectionSpinner"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
                             android:layout_marginTop="24dp"
                             android:layout_marginBottom="32dp"
+                            android:prompt="@string/entry_title_gender"
+                            android:textAlignment="center"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="@+id/germanNameEntry"
-                            app:layout_constraintStart_toStartOf="@+id/germanFlagImage"
+                            app:layout_constraintStart_toEndOf="@+id/genderSelectionTitle"
                             app:layout_constraintTop_toBottomOf="@+id/germanNameEntry"
-                            app:layout_constraintVertical_bias="0.0"
-                            tools:listheader="Hello" />
+                            app:layout_constraintVertical_bias="0.0" />
 
                         <Button
                             android:id="@+id/saveEntryButton"
@@ -178,10 +189,11 @@
                             android:layout_height="wrap_content"
                             android:layout_marginTop="16dp"
                             android:layout_marginBottom="16dp"
+                            android:onClick="@{() -> newAnimalViewModel.eventSaveStarted()}"
                             android:text="@string/save_text"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="@+id/genderSelectionSpinner"
-                            app:layout_constraintStart_toStartOf="@+id/genderSelectionSpinner"
+                            app:layout_constraintStart_toStartOf="@+id/genderSelectionTitle"
                             app:layout_constraintTop_toBottomOf="@+id/genderSelectionSpinner" />
 
                     </androidx.constraintlayout.widget.ConstraintLayout>

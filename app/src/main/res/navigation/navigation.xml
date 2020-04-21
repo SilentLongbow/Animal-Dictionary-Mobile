@@ -7,28 +7,42 @@
 
     <fragment
         android:id="@+id/animalSelectionFragment"
-        android:name="nz.ac.uclive.mjk141.en_dedictionary.animal_selection.FragmentAnimalSelection"
+        android:name="nz.ac.uclive.mjk141.en_dedictionary.animal_selection.AnimalSelectionFragment"
         android:label="The Best Label"
-        tools:layout="@layout/fragment_animal_selection" >
+        tools:layout="@layout/animal_selection_fragment" >
         <action
             android:id="@+id/action_animalSelectionFragment_to_fragmentAnimalViewImage"
-            app:destination="@id/fragmentAnimalViewImage" />
+            app:destination="@id/fragmentAnimalViewImage"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
         <action
-            android:id="@+id/action_animalSelectionFragment_to_fragmentAddAnimal2"
-            app:destination="@id/fragmentAddAnimal" />
+            android:id="@+id/navigate_to_add_anima_screen"
+            app:destination="@id/fragmentAddAnimal"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
     </fragment>
     <fragment
         android:id="@+id/fragmentAnimalViewImage"
-        android:name="nz.ac.uclive.mjk141.en_dedictionary.view_animal.FragmentAnimalViewImage"
+        android:name="nz.ac.uclive.mjk141.en_dedictionary.view_animal.ViewAnimalFragment"
         android:label="fragment_animal_image_view"
-        tools:layout="@layout/fragment_animal_image_view" />
+        tools:layout="@layout/view_animal_fragment" />
     <fragment
         android:id="@+id/fragmentAddAnimal"
-        android:name="nz.ac.uclive.mjk141.en_dedictionary.add_animal.FragmentAddAnimal"
-        android:label="fragment_add_animal_fragment"
-        tools:layout="@layout/fragment_add_animal" >
+        android:name="nz.ac.uclive.mjk141.en_dedictionary.add_animal.AddAnimalFragment"
+        android:label="@string/title_add_animal"
+        tools:layout="@layout/add_animal_fragment">
         <action
             android:id="@+id/action_fragmentAddAnimal_to_animalSelectionFragment"
-            app:destination="@id/animalSelectionFragment" />
+            app:destination="@id/animalSelectionFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:popUpTo="@id/animalSelectionFragment"
+            app:popUpToInclusive="true" />
     </fragment>
 </navigation>

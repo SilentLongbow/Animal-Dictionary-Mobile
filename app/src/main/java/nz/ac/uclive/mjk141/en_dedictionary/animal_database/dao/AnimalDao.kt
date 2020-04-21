@@ -12,4 +12,10 @@ interface AnimalDao: BaseDao<Animal> {
 
     @Query("SELECT * FROM animal_table")
     fun selectAll(): List<Animal?>
+
+    @Query("SELECT * FROM animal_table WHERE english_name = :englishName")
+    fun selectByEnglishName(englishName: String): Animal?
+
+    @Query("SELECT * FROM animal_table WHERE german_name = :germanName")
+    fun selectByGermanName(germanName: String): Animal?
 }

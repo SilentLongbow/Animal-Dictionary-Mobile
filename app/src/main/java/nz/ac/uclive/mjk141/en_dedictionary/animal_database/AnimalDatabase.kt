@@ -8,7 +8,7 @@ import androidx.room.TypeConverters
 import nz.ac.uclive.mjk141.en_dedictionary.animal_database.dao.AnimalDao
 import nz.ac.uclive.mjk141.en_dedictionary.utils.Converters
 
-@Database(entities = [Animal::class], version = 1, exportSchema = false)
+@Database(entities = [Animal::class], version = 2, exportSchema = false)
 @TypeConverters(Converters::class)
 abstract class AnimalDatabase : RoomDatabase() {
 

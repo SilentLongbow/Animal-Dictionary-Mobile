@@ -14,4 +14,7 @@
     <string name="photo_of_the_animal">Das Foto von dem Tier</string>
     <string name="image_of_the_german_flag">Bild der deutschen Flagge</string>
     <string name="image_of_the_english_flag">Bild der englischen Flagge</string>
+    <string name="save_text">Hinzufügen</string>
+    <string name="already_exists_toast_display">Das Tier mit der Bezeichnung „%1$s\" ist schon vorhanden</string>
+    <string name="event_animal_added">Tier hinzugefügt</string>
 </resources>

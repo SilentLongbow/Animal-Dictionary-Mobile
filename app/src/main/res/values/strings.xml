@@ -7,10 +7,13 @@
     <string name="title_add_animal">Add an Animal</string>
 
     <string name="add_animal_description" translatable="false">Floating action button to add a new animal to the database</string>
-    <string name="add_image">Add Image</string>
+    <string name="add_image">Select Image</string>
     <string name="english_name">English Name</string>
     <string name="german_name">German Name</string>
     <string name="photo_of_the_animal">Photo of the animal</string>
     <string name="image_of_the_german_flag">Image of the German flag</string>
     <string name="image_of_the_english_flag">Image of the English flag</string>
+    <string name="save_text">Save</string>
+    <string name="already_exists_toast_display">Animal with name \"%1$s\" already exists</string>
+    <string name="event_animal_added">Animal added</string>
 </resources>
