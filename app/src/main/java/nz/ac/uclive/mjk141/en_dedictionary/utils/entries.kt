@@ -1,224 +1,239 @@
 package nz.ac.uclive.mjk141.en_dedictionary.utils
 
-import nz.ac.uclive.mjk141.en_dedictionary.main_page_recycler.DictionaryEntry
+import nz.ac.uclive.mjk141.en_dedictionary.animal_database.Animal
 
-enum class Gender(val str: String) {
+
+enum class Gender(private val str: String) {
     Masculine("der"),
     Feminine("die"),
-    Neutral("das")
+    Neutral("das");
+
+    override fun toString() = str
 }
 
 object Translations {
     val entries = arrayListOf(
-        DictionaryEntry(
-            "Alligator",
-            "Alligator",
-            Gender.Masculine
+        Animal(
+            englishName = "Alligator",
+            germanName = "Alligator",
+            gender = Gender.Masculine,
+            imageId = "Alligator.jpg"
         ),
-        DictionaryEntry(
-            "Ant",
-            "Ameise",
-            Gender.Feminine
+        Animal(
+            englishName = "Bear",
+            germanName = "Bär",
+            gender = Gender.Masculine,
+            imageId = "Bear.jpg"
         ),
-        DictionaryEntry(
-            "Bear",
-            "Bär",
-            Gender.Masculine
+        Animal(
+            englishName = "Butterfly",
+            germanName = "Schmetterling",
+            gender = Gender.Masculine,
+            imageId = "Butterfly.jpg"
         ),
-        DictionaryEntry(
-            "Bird",
-            "Vogel",
-            Gender.Masculine
+        Animal(
+            englishName = "Camel",
+            germanName = "Kamel",
+            gender = Gender.Neutral,
+            imageId = "Camel.jpg"
         ),
-        DictionaryEntry(
-            "Cat",
-            "Katze",
-            Gender.Feminine
+        Animal(
+            englishName = "Cat",
+            germanName = "Katze",
+            gender = Gender.Feminine,
+            imageId = "Cat.jpg"
         ),
-        DictionaryEntry(
-            "Cow",
-            "Kuh",
-            Gender.Feminine
+        Animal(
+            englishName = "Caterpillar",
+            germanName = "Raupe",
+            gender = Gender.Feminine,
+            imageId = "Caterpillar.jpg"
         ),
-        DictionaryEntry(
-            "Deer",
-            "Reh",
-            Gender.Neutral
+        Animal(
+            englishName = "Cheetah",
+            germanName = "Gepard",
+            gender = Gender.Masculine,
+            imageId = "Cheetah.jpg"
         ),
-        DictionaryEntry(
-            "Dog",
-            "Hund",
-            Gender.Masculine
+        Animal(
+            englishName = "Cow",
+            germanName = "Kuh",
+            gender = Gender.Feminine,
+            imageId = "Cow.jpg"
         ),
-        DictionaryEntry(
-            "Donkey",
-            "Esel",
-            Gender.Neutral
+        Animal(
+            englishName = "Deer",
+            germanName = "Reh",
+            gender = Gender.Neutral,
+            imageId = "Deer.jpg"
         ),
-        DictionaryEntry(
-            "Eagle",
-            "Adler",
-            Gender.Masculine
+        Animal(
+            englishName = "Dog",
+            germanName = "Hund",
+            gender = Gender.Masculine,
+            imageId = "Dog.jpg"
         ),
-        DictionaryEntry(
-            "Elephant",
-            "Elefant",
-            Gender.Masculine
+        Animal(
+            englishName = "Donkey",
+            germanName = "Esel",
+            gender = Gender.Neutral,
+            imageId = "Donkey.jpg"
         ),
-        DictionaryEntry(
-            "Fish",
-            "Fisch",
-            Gender.Masculine
+        Animal(
+            englishName = "Eagle",
+            germanName = "Adler",
+            gender = Gender.Masculine,
+            imageId = "Eagle.jpg"
         ),
-        DictionaryEntry(
-            "Fox",
-            "Fuchs",
-            Gender.Masculine
+        Animal(
+            englishName = "Elephant",
+            germanName = "Elefant",
+            gender = Gender.Masculine,
+            imageId = "Elephant.jpg"
         ),
-        DictionaryEntry(
-            "Giraffe",
-            "Giraffe",
-            Gender.Feminine
+        Animal(
+            englishName = "Fish",
+            germanName = "Fisch",
+            gender = Gender.Masculine,
+            imageId = "Fish.jpg"
         ),
-        DictionaryEntry(
-            "Goat",
-            "Ziege",
-            Gender.Feminine
+        Animal(
+            englishName = "Fox",
+            germanName = "Fuchs",
+            gender = Gender.Masculine,
+            imageId = "Fox.jpg"
         ),
-        DictionaryEntry(
-            "Hare",
-            "Hase",
-            Gender.Masculine
+        Animal(
+            englishName = "Giraffe",
+            germanName = "Giraffe",
+            gender = Gender.Feminine,
+            imageId = "Giraffe.jpg"
         ),
-        DictionaryEntry(
-            "Horse",
-            "Pferd",
-            Gender.Neutral
+        Animal(
+            englishName = "Goat",
+            germanName = "Ziege",
+            gender = Gender.Feminine,
+            imageId = "Goat.jpg"
         ),
-        DictionaryEntry(
-            "Jaguar",
-            "Jaguar",
-            Gender.Masculine
+        Animal(
+            englishName = "Hedgehog",
+            germanName = "Igel",
+            gender = Gender.Masculine,
+            imageId = "Hedgehog.jpg"
         ),
-        DictionaryEntry(
-            "Kangaroo",
-            "Känguru",
-            Gender.Neutral
+        Animal(
+            englishName = "Hippopotamus",
+            germanName = "Nilpferd",
+            gender = Gender.Neutral,
+            imageId = "Hippopotamus.jpg"
         ),
-        DictionaryEntry(
-            "Kiwi",
-            "Kiwi",
-            Gender.Feminine
+        Animal(
+            englishName = "Horse",
+            germanName = "Pferd",
+            gender = Gender.Neutral,
+            imageId = "Horse.jpg"
         ),
-        DictionaryEntry(
-            "Leopard",
-            "Leopard",
-            Gender.Masculine
+        Animal(
+            englishName = "Kangaroo",
+            germanName = "Känguru",
+            gender = Gender.Neutral,
+            imageId = "Kangaroo.jpg"
         ),
-        DictionaryEntry(
-            "Lion",
-            "Löwe",
-            Gender.Masculine
+        Animal(
+            englishName = "Kiwi",
+            germanName = "Kiwi",
+            gender = Gender.Feminine,
+            imageId = "Kiwi.jpg"
         ),
-        DictionaryEntry(
-            "Lynx",
-            "Luchs",
-            Gender.Masculine
+        Animal(
+            englishName = "Lion",
+            germanName = "Löwe",
+            gender = Gender.Masculine,
+            imageId = "Lion.jpg"
         ),
-        DictionaryEntry(
-            "Manta Ray",
-            "Mantarochen",
-            Gender.Masculine
+        Animal(
+            englishName = "Lynx",
+            germanName = "Luchs",
+            gender = Gender.Masculine,
+            imageId = "Lynx.jpg"
         ),
-        DictionaryEntry(
-            "Mole",
-            "Maulwurf",
-            Gender.Masculine
+        Animal(
+            englishName = "Monkey",
+            germanName = "Affe",
+            gender = Gender.Masculine,
+            imageId = "Monkey.jpg"
         ),
-        DictionaryEntry(
-            "Newt",
-            "Molch",
-            Gender.Masculine
+        Animal(
+            englishName = "Octopus",
+            germanName = "Oktopus",
+            gender = Gender.Masculine,
+            imageId = "Octopus.jpg"
         ),
-        DictionaryEntry(
-            "Octopus",
-            "Oktopus",
-            Gender.Masculine
+        Animal(
+            englishName = "Ostrich",
+            germanName = "Strauß",
+            gender = Gender.Masculine,
+            imageId = "Ostrich.jpg"
         ),
-        DictionaryEntry(
-            "Ostrich",
-            "Strauß",
-            Gender.Masculine
+        Animal(
+            englishName = "Parrot",
+            germanName = "Papagei",
+            gender = Gender.Masculine,
+            imageId = "Parrot.jpg"
         ),
-        DictionaryEntry(
-            "Parrot",
-            "Papagei",
-            Gender.Masculine
+        Animal(
+            englishName = "Pig",
+            germanName = "Schwein",
+            gender = Gender.Neutral,
+            imageId = "Pig.jpg"
         ),
-        DictionaryEntry(
-            "Pig",
-            "Schwein",
-            Gender.Neutral
+        Animal(
+            englishName = "Rabbit",
+            germanName = "Kaninchen",
+            gender = Gender.Neutral,
+            imageId = "Rabbit.jpg"
         ),
-        DictionaryEntry(
-            "Quail",
-            "Wachtel",
-            Gender.Feminine
+        Animal(
+            englishName = "Rhinoceros",
+            germanName = "Nashorn",
+            gender = Gender.Neutral,
+            imageId = "Rhino.jpg"
         ),
-        DictionaryEntry(
-            "Rabbit",
-            "Kaninchen",
-            Gender.Neutral
+        Animal(
+            englishName = "Seal",
+            germanName = "Siegel",
+            gender = Gender.Neutral,
+            imageId = "Seal.jpg"
         ),
-        DictionaryEntry(
-            "Rhinoceros",
-            "Nashorn",
-            Gender.Neutral
+        Animal(
+            englishName = "Snake",
+            germanName = "Schlange",
+            gender = Gender.Feminine,
+            imageId = "Snake.jpg"
         ),
-        DictionaryEntry(
-            "Seal",
-            "Siegel",
-            Gender.Neutral
+        Animal(
+            englishName = "Tiger",
+            germanName = "Tiger",
+            gender = Gender.Masculine,
+            imageId = "Tiger.jpg"
         ),
-        DictionaryEntry(
-            "Snake",
-            "Schlange",
-            Gender.Feminine
+        Animal(
+            englishName = "Tortoise",
+            germanName = "Schildkröte",
+            gender = Gender.Feminine,
+            imageId = "Tortoise.jpg"
         ),
-        DictionaryEntry(
-            "Tiger",
-            "Tiger",
-            Gender.Masculine
+        Animal(
+            englishName = "Weasel",
+            germanName = "Wiesel",
+            gender = Gender.Masculine,
+            imageId = "Weasel.jpg"
         ),
-        DictionaryEntry(
-            "Tortoise",
-            "Schildkröte",
-            Gender.Feminine
-        ),
-        DictionaryEntry(
-            "Vulture",
-            "Geier",
-            Gender.Masculine
-        ),
-        DictionaryEntry(
-            "Weasel",
-            "Wiesel",
-            Gender.Masculine
-        ),
-        DictionaryEntry(
-            "Wolf",
-            "Wolf",
-            Gender.Masculine
-        ),
-        DictionaryEntry(
-            "Yak",
-            "Yak",
-            Gender.Masculine
-        ),
-        DictionaryEntry(
-            "Zebra",
-            "Zebra",
-            Gender.Neutral
+        Animal(
+            englishName = "Wolf",
+            germanName = "Wolf",
+            gender = Gender.Masculine,
+            imageId = "Wolf.jpg"
         )
     )
 }
