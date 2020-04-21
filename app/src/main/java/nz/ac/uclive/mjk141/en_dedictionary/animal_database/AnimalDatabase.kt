@@ -26,7 +26,7 @@ abstract class AnimalDatabase : RoomDatabase() {
                     instance = Room.databaseBuilder(
                         context.applicationContext,
                         AnimalDatabase::class.java,
-                        "EnDeDictionary.db"
+                        "en_de_dictionary.db"
                     )
                         .fallbackToDestructiveMigration()
                         .build()

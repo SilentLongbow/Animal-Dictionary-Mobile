@@ -19,6 +19,6 @@ data class Animal(
     @ColumnInfo(name = "gender")
     val gender: Gender,
 
-    @ColumnInfo(name = "image_guid")
-    val imageId: String
+    @ColumnInfo(name = "image_id")
+    val imageId: String?
 )
