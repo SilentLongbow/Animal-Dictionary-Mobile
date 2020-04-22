@@ -10,14 +10,14 @@ import nz.ac.uclive.mjk141.en_dedictionary.R
 /**
  * A simple [Fragment] subclass.
  */
-class FragmentAnimalViewImage : Fragment() {
+class ViewAnimalFragment : Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_animal_image_view, container, false)
+        return inflater.inflate(R.layout.view_animal_fragment, container, false)
     }
 
 }
