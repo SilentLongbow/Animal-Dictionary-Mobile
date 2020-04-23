@@ -1,4 +1,4 @@
-package nz.ac.uclive.mjk141.en_dedictionary.main_page_recycler
+package nz.ac.uclive.mjk141.en_dedictionary.animal_selection
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -8,11 +8,15 @@ import androidx.recyclerview.widget.RecyclerView
 import nz.ac.uclive.mjk141.en_dedictionary.animal_database.Animal
 import nz.ac.uclive.mjk141.en_dedictionary.databinding.ListItemAnimalBinding
 
-class AnimalAdapter(val clickListener: AnimalListener) : ListAdapter<Animal, AnimalAdapter.ViewHolder>(AnimalDiffCallback()) {
+class AnimalAdapter(val clickListener: AnimalListener) : ListAdapter<Animal, AnimalAdapter.ViewHolder>(
+    AnimalDiffCallback()
+) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         // Parent - RecyclerView that ViewHolder will be in, and context is the activity RV is in.
-        return ViewHolder.from(parent)
+        return ViewHolder.from(
+            parent
+        )
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
@@ -34,7 +38,9 @@ class AnimalAdapter(val clickListener: AnimalListener) : ListAdapter<Animal, Ani
             fun from(parent: ViewGroup): ViewHolder {
                 val layoutInflater = LayoutInflater.from(parent.context)
                 val binding = ListItemAnimalBinding.inflate(layoutInflater, parent, false)
-                return ViewHolder(binding)
+                return ViewHolder(
+                    binding
+                )
             }
         }
     }

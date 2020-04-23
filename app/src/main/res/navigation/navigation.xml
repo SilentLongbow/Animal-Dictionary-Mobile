@@ -28,8 +28,8 @@
     <fragment
         android:id="@+id/fragmentAnimalView"
         android:name="nz.ac.uclive.mjk141.en_dedictionary.view_animal.ViewAnimalFragment"
-        android:label="fragment_animal_image_view"
-        tools:layout="@layout/view_animal_fragment" >
+        tools:layout="@layout/view_animal_fragment"
+        android:label="@string/view_animal_title">
         <argument
             android:name="animalId"
             app:argType="long" />

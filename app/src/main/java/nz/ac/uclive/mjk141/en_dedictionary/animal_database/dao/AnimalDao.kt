@@ -9,7 +9,7 @@ import nz.ac.uclive.mjk141.en_dedictionary.animal_database.Animal
 interface AnimalDao: BaseDao<Animal> {
 
     @Query("SELECT * FROM animal_table WHERE id = :key")
-    fun selectById(key: Long): Animal
+    fun selectById(key: Long): LiveData<Animal>
 
     @Query("SELECT * FROM animal_table")
     fun selectAll(): LiveData<List<Animal>>

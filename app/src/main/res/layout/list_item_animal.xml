@@ -10,7 +10,7 @@
             type="nz.ac.uclive.mjk141.en_dedictionary.animal_database.Animal" />
         <variable
             name="clickListener"
-            type="nz.ac.uclive.mjk141.en_dedictionary.main_page_recycler.AnimalListener" />
+            type="nz.ac.uclive.mjk141.en_dedictionary.animal_selection.AnimalListener" />
     </data>
 
     <androidx.cardview.widget.CardView

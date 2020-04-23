@@ -17,4 +17,5 @@
     <string name="save_text">Hinzufügen</string>
     <string name="already_exists_toast_display">Das Tier mit der Bezeichnung „%s\" ist schon vorhanden</string>
     <string name="event_animal_added">Tier hinzugefügt</string>
+    <string name="view_animal_title">Tier ansehen</string>
 </resources>

@@ -17,4 +17,5 @@
     <string name="already_exists_toast_display">Animal with name \"%s\" already exists</string>
     <string name="event_animal_added">Animal added</string>
     <string name="german_text_with_gender" translatable="false">%s %s</string>
+    <string name="view_animal_title">View Animal</string>
 </resources>
