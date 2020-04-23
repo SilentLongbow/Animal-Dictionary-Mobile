@@ -14,6 +14,7 @@
     <string name="image_of_the_german_flag">Image of the German flag</string>
     <string name="image_of_the_english_flag">Image of the English flag</string>
     <string name="save_text">Save</string>
-    <string name="already_exists_toast_display">Animal with name \"%1$s\" already exists</string>
+    <string name="already_exists_toast_display">Animal with name \"%s\" already exists</string>
     <string name="event_animal_added">Animal added</string>
+    <string name="german_text_with_gender" translatable="false">%s %s</string>
 </resources>
