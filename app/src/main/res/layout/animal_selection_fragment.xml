@@ -8,18 +8,20 @@
     tools:context=".animal_selection.AnimalSelectionFragment">
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/animal_display_recycler"
+        android:id="@+id/animalDisplayRecycler"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        android:padding="4dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/floating_animal_add_button"
+        android:id="@+id/floatingAnimalAddButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="16dp"
-        android:layout_gravity="bottom|right"
         android:clickable="true"
-        android:src="@drawable/ic_add_white_24dp" />
+        android:src="@drawable/ic_add_black_24dp" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -8,11 +8,11 @@
     <fragment
         android:id="@+id/animalSelectionFragment"
         android:name="nz.ac.uclive.mjk141.en_dedictionary.animal_selection.AnimalSelectionFragment"
-        android:label="The Best Label"
-        tools:layout="@layout/animal_selection_fragment" >
+        android:label="@string/app_name"
+        tools:layout="@layout/animal_selection_fragment">
         <action
-            android:id="@+id/action_animalSelectionFragment_to_fragmentAnimalViewImage"
-            app:destination="@id/fragmentAnimalViewImage"
+            android:id="@+id/action_animalSelectionFragment_to_fragmentAnimalView"
+            app:destination="@id/fragmentAnimalView"
             app:enterAnim="@anim/slide_in_right"
             app:exitAnim="@anim/slide_out_left"
             app:popEnterAnim="@anim/slide_in_left"
@@ -26,10 +26,14 @@
             app:popExitAnim="@anim/slide_out_right" />
     </fragment>
     <fragment
-        android:id="@+id/fragmentAnimalViewImage"
+        android:id="@+id/fragmentAnimalView"
         android:name="nz.ac.uclive.mjk141.en_dedictionary.view_animal.ViewAnimalFragment"
         android:label="fragment_animal_image_view"
-        tools:layout="@layout/view_animal_fragment" />
+        tools:layout="@layout/view_animal_fragment" >
+        <argument
+            android:name="animalId"
+            app:argType="long" />
+    </fragment>
     <fragment
         android:id="@+id/fragmentAddAnimal"
         android:name="nz.ac.uclive.mjk141.en_dedictionary.add_animal.AddAnimalFragment"
