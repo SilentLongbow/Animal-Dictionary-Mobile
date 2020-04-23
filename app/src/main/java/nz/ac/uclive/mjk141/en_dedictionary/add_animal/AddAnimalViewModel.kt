@@ -142,7 +142,7 @@ class AddAnimalViewModel(
     private suspend fun insertAnimalIntoDatabase(animal: Animal) {
         withContext(Dispatchers.IO) {
             val existingEnglishName = database.selectByEnglishName(animal.englishName)
-            val existingGermanName = database.selectByEnglishName(animal.germanName)
+            val existingGermanName = database.selectByGermanName(animal.germanName)
             when {
                 existingEnglishName != null -> {
                     _englishNameExists.postValue(true)
