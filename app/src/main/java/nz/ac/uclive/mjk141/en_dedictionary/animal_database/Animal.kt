@@ -1,9 +1,7 @@
 package nz.ac.uclive.mjk141.en_dedictionary.animal_database
 
-import androidx.room.ColumnInfo
-import androidx.room.Entity
-import androidx.room.Index
-import androidx.room.PrimaryKey
+import android.graphics.Bitmap
+import androidx.room.*
 import nz.ac.uclive.mjk141.en_dedictionary.utils.Gender
 
 @Entity(
@@ -26,4 +24,7 @@ data class Animal(
 
     @ColumnInfo(name = "image_id")
     val imageId: String
-)
+) {
+    @Ignore
+    var imageBitmap: Bitmap? = null
+}
